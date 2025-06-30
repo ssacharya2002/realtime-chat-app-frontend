@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offline - Chat App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #0f172a, #1e293b);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.5;
+    }
+
+    .dot.blue {
+      background-color: #3b82f6;
+      width: 10px;
+      height: 10px;
+      top: 25%;
+      left: 30%;
+    }
+
+    .dot.yellow {
+      background-color: #facc15;
+      width: 12px;
+      height: 12px;
+      top: 30%;
+      right: 28%;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 24px;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .retry-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .retry-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="dot blue"></div>
+  <div class="dot yellow"></div>
+  <div class="container">
+    <div class="icon">📱</div>
+    <h1>You're Offline</h1>
+    <p>Please check your internet connection and try again.</p>
+    <button class="retry-btn" onclick="window.location.reload()">Retry</button>
+  </div>
+</body>
+</html>

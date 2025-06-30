@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import { useAuth } from "./contexts/AuthContext"
 import { ThemeProvider } from "./contexts/ThemeContext"

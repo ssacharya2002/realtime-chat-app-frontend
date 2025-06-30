@@ -3,5 +3,13 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "paths": {
+      "virtual:pwa-register/react": [
+        "node_modules/vite-plugin-pwa/dist/es/pwa-register.js"
+      ]
+    },
+    "types": ["vite-plugin-pwa/client"]
+  }
 }
