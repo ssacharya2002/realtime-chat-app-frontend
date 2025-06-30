@@ -1,5 +1,3 @@
-// contexts/SocketContext.tsx
-
 import type React from "react"
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react"
 import { io, type Socket } from "socket.io-client"
@@ -38,12 +36,12 @@ interface SocketProviderProps {
 
 function getApiUrl() {
   try {
-    if ((import.meta as any)?.env?.VITE_API_URL) {
-      return (import.meta as any).env.VITE_API_URL
+    if ((import.meta as any)?.env?.VITE_API_URL_SOCKET) {
+      return (import.meta as any).env.VITE_API_URL_SOCKET
     }
   } catch {}
-  if (typeof window !== "undefined" && (window as any).VITE_API_URL) {
-    return (window as any).VITE_API_URL
+  if (typeof window !== "undefined" && (window as any).VITE_API_URL_SOCKET) {
+    return (window as any).VITE_API_URL_SOCKET
   }
   return "http://localhost:8000"
 }
